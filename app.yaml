@@ -1,0 +1,17 @@
+command:
+  - streamlit
+  - run
+  - app.py
+
+env:
+  - name: STREAMLIT_GATHER_USAGE_STATS
+    value: "false"
+
+  - name: DATABRICKS_HOST
+    value: "https://dbc-3eee518d-2552.cloud.databricks.com"
+
+  - name: TAVILY_API_KEY
+    valueFrom: tavily-secret
+
+  - name: MODEL_NAME
+    valueFrom: cricket-llm
